@@ -1,19 +1,77 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\begin{table}[!htp]
   \centering
-  \includegraphics{stab1_1_dual.pdf}
-  \caption{Plot der Messwerte von dem zweiseitig eingespanntem eckigen Stab klein.}
-  \label{fig:stab1_1-plot}
-\end{figure}
+  \caption{Eigenschaften der Stäbe und die jeweils angehängten Massen.}
+  \label{tab:staebe}
+  \begin{tabular}{c S[table-format=3.0] S[table-format=1.2] S[table-format=3.1] S[table-format=4.1]}
+    \toprule
+    {Stab} & {$r$ / mm} & {$l$ / m} & {$m_\text{Stab}$ / g} & {$m_\text{Gewicht}$ / g} \\
+    \midrule
+    Eckig, zweiseitig & 104 & 0.58 & 167.1 & 2361.8 \\
+    Eckig, einseitig  & 100 & 0.60 & 502.4 & 1191.5 \\
+    Rund, einseitig   & 100 & 0.55 & 121.3 &  541.8 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
-\begin{figure}
-  \centering
-  \includegraphics{stab1_2_dual.pdf}
-  \caption{Plot der Messwerte von dem zweiseitig eingespanntem eckigen Stab groß.}
-  \label{fig:stab1_2-plot}
-\end{figure}
+\subsection{Bestimmung des Elastizitätsmoduls}
+
+Von den jeweils gemessenen Werten für die Durchbiegung des Stabes werden die Werte der jeweiligen Nullmessung subtrahiert, somit werden die Werte für $D(x)$ nach
+
+\begin{equation}
+  D(x) = D_m(x) - D_\text{Null}(x)
+\end{equation}
+
+berechnet. Die Werte für $x$ werden in verschiedene Funktionen überführt, um so eine lineare Ausgleichsrechnung durchführen zu können.
+Dabei ist die Funktion für den eckigen Stab mit einseitiger Einspannung
+
+\begin{equation}
+  g_\text{se}(x) = l_\text{se} \cdot x^2 - \frac{x^3}{3}
+\end{equation}
+
+und für den runden Stab mit ebenfalls einseitger Einspannung
+
+\begin{equation}
+  g_\text{sr}(x) = l_\text{sr} \cdot x^2 - \frac{x^3}{3} .
+\end{equation}
+
+Für den eckigen Stab mit beidseitiger Einspannung wird für die Seite links von dem Gewicht sowie die Seite rechts von dem Gewicht je eine Funktion benötigt.
+Die Funktion für die linke Seite, also $\frac{l_d}{2} \leq x \leq l_d$, lautet
+
+\begin{equation}
+  g_\text{dl}(x) = 4x^3 - 12l_d \cdot x^2 + 9l_d^2 \cdot x - l_d^3
+\end{equation}
+
+und der entsprechende für die rechte Seite, also $0 \leq x \leq \frac{l_d}{2}$,lautet
+
+\begin{equation}
+  g_\text{dr}(x) = 3 l_d^2 \cdot x - 4x^3.
+\end{equation}
+
+Bei diesen Formeln sind $l_d$, $l_\text{sr}$ und $l_\text{se}$ jeweils die Längen der Stäbe.
+
+\input{../content/stab2_single.tex}
+
+\input{../content/stab3_single.tex}
+
+\input{../content/stab1_dual.tex}
+
+Die Werte in \autoref{tab:stab1_dual}, \autoref{tab:stab2_single} sowie \autoref{tab:stab3_single} werden genutzt um mit den oben genannten Gleichungen eine lineare Ausgleichsrechnung durchzuführen.
+Die Ergebnisse werden mittels Python 3.7.0 geplottet und mit einem Fit der Form $D(x) = a * g(x) + b$ angenähert.
+Die dazugehörigen Parameter $a$ und $b$ sind mittels
+\begin{equation}
+\label{eqn:a}
+  a = \frac {\sum_{i=1}^N (D(x)_i - \overline{D(x)}) (g(x)_i - \overline{g(x)})}{\sum_{i=1}^N (D(x)_i - \overline{D(x)})^2}
+\end{equation}
+und
+\begin{equation}
+\label{eqn:b}
+  b = \overline{g(x)} - a \cdot \overline{D(x)}
+\end{equation}
+zu berechnen.
+Die entstehenden Plots sind in \autoref{fig:stab2_single}, \autoref{fig:stab3_single} sowie \autoref{fig:stab1_1_dual} und \autoref{fig:stab1_2_dual} zu sehen.
 
 \begin{figure}
   \centering
@@ -27,4 +85,18 @@
   \includegraphics{stab3_single.pdf}
   \caption{Plot der Messwerte von dem einseitig eingespanntem runden Stab.}
   \label{fig:stab1-plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{stab1_1_dual.pdf}
+  \caption{Plot der Messwerte rechts von dem Gewicht von dem zweiseitig eingespanntem eckigen Stab.}
+  \label{fig:stab1_1-plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{stab1_2_dual.pdf}
+  \caption{Plot der Messwerte links von dem Gewicht von dem zweiseitig eingespanntem eckigen Stab groß.}
+  \label{fig:stab1_2-plot}
 \end{figure}

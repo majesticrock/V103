@@ -29,13 +29,15 @@ for values in werte:
         
         i+=1
 
+ydata = ydata * 10**(-3)
+
 x_line = np.linspace(3, 48)*10**(-2)
 x_line = l*(x_line**2) - (x_line**3)/3
 plt.plot(xdata, ydata, 'bx', label="Messwerte")
 popt1, pcov1 = curve_fit(func, xdata, ydata)
 plt.plot(x_line, func(x_line, *popt1), "r-", label="Fit")
-plt.xlabel(r"$tbd$")
-plt.ylabel(r"$tbd$")
+plt.xlabel(r"$g_\text{se}(x)$ / $\symup{m}^3$")
+plt.ylabel(r"$D_\text{se}(x)$ / m")
 print(popt1)
 print(np.sqrt(np.diag(pcov1)))
 plt.legend()
