@@ -1,11 +1,20 @@
 all: build/main.pdf
 
 # hier Python-Skripte:
-#build/plot.pdf: plot.py matplotlibrc header-matplotlib.tex | build
-#	TEXINPUTS=$$(pwd): python plot.py
+build/stab1_1_dual.pdf: plot-stab1_1.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-stab1_1.py
+
+build/stab1_2_dual.pdf: plot-stab1_2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-stab1_2.py
+
+build/stab2_single.pdf: plot-stab2.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-stab2.py
+
+build/stab3_single.pdf: plot-stab3.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS=$$(pwd): python plot-stab3.py
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: 
+build/main.pdf: build/stab1_1_dual.pdf build/stab1_2_dual.pdf build/stab2_single.pdf build/stab3_single.pdf
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
