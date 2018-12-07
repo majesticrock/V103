@@ -56,11 +56,12 @@ Bei diesen Formeln sind $l_d$, $l_\text{sr}$ und $l_\text{se}$ jeweils die Läng
 
 \input{../content/stab3_single.tex}
 
-\input{../content/stab1_dual.tex}
-
 Die Werte in \autoref{tab:stab1_dual}, \autoref{tab:stab2_single} sowie \autoref{tab:stab3_single} werden genutzt um mit den oben genannten Gleichungen eine lineare Ausgleichsrechnung durchzuführen.
 Die Ergebnisse werden mittels Python 3.7.0 geplottet und mit einem Fit der Form $D(x) = a * g(x) + b$ angenähert.
 Die dazugehörigen Parameter $a$ und $b$ sind mittels
+
+\input{../content/stab1_dual.tex}
+
 \begin{equation}
 \label{eqn:a}
   a = \frac {\sum_{i=1}^N (D(x)_i - \overline{D(x)}) (g(x)_i - \overline{g(x)})}{\sum_{i=1}^N (D(x)_i - \overline{D(x)})^2}
@@ -71,20 +72,20 @@ und
   b = \overline{g(x)} - a \cdot \overline{D(x)}
 \end{equation}
 zu berechnen.
-Die entstehenden Plots sind in \autoref{fig:stab2_single}, \autoref{fig:stab3_single} sowie \autoref{fig:stab1_1_dual} und \autoref{fig:stab1_2_dual} zu sehen.
+Die entstehenden Plots sind in \autoref{fig:stab2-plot}, \autoref{fig:stab3-plot} sowie \autoref{fig:stab1_1-plot} und \autoref{fig:stab1_2-plot} zu sehen.
 
 \begin{figure}
   \centering
   \includegraphics{stab2_single.pdf}
   \caption{Plot der Messwerte von dem einseitig eingespanntem eckigen Stab.}
-  \label{fig:stab1-plot}
+  \label{fig:stab2-plot}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics{stab3_single.pdf}
   \caption{Plot der Messwerte von dem einseitig eingespanntem runden Stab.}
-  \label{fig:stab1-plot}
+  \label{fig:stab3-plot}
 \end{figure}
 
 \begin{figure}
@@ -100,3 +101,24 @@ Die entstehenden Plots sind in \autoref{fig:stab2_single}, \autoref{fig:stab3_si
   \caption{Plot der Messwerte links von dem Gewicht von dem zweiseitig eingespanntem eckigen Stab groß.}
   \label{fig:stab1_2-plot}
 \end{figure}
+
+Die Werte für $a_i$ und $b_i$ werden mittels Python 3.7.0 bestimmt und lauten
+
+\vspace{2em}
+\centerline{$a_\text{sr} = (6.39 \pm 0.01) \cdot 10^{-2} \frac{1}{\symup{m}^2}$}
+
+\centerline{$b_\text{sr} = (5.7 \pm 0.2) \cdot 10^{-4} $ m}
+\vspace{1em}
+\centerline{$a_\text{se} = (6.62 \pm 0.01) \cdot 10^{-2} \frac{1}{\symup{m}^2}$}
+
+\centerline{$b_\text{se} = (4.8 \pm 0.3) \cdot 10^{-4} $ m}
+\vspace{1em}
+\centerline{$a_\text{dr} = (6.137 \pm 0.002) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
+
+\centerline{$b_\text{dr} = (9 \pm 1) \cdot 10^{-5} $ m}
+\vspace{1em}
+\centerline{$a_\text{dl} = (6.71 \pm 0.02) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
+
+\centerline{$b_\text{dl} = (2.0 \pm 0.3) \cdot 10^{-4} $ m}
+\vspace{1em}
+Lorem ipsum
