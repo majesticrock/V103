@@ -1,5 +1,20 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{BEstimmung der Flächenträgheitsmomente}
+%
+Das Flächenträgheitsmoment des runden Stabes wird mit GLEICHUNG als
+
+\centerline{$I_\text{sr} = \frac{\pi \delta_\text{sr}^4}{64} = 4.909 \cdot 10^{-6} \symup{m}^4$}
+
+bestimmt. Für die beiden eckigen Stäbe ergibt sich 
+
+\centerline{$I_\text{se} = \frac{\delta_\text{se}^4}{12} = 9.749 \cdot 10^{-6} \symup{m}^4$}
+
+und analog
+
+\centerline{$I_\text{d} = \frac{\delta_\text{d}^4}{12} = 8.334 \cdot 10^{-6} \symup{m}^4$.}
+
+Dabei sind die jeweiligen $\delta$ die entsprechend gemessenen Dicken der Stäbe. Diese Werte sind in \autoref{tab:staebe} zu finden.
 
 \begin{table}[!htp]
   \centering
@@ -7,16 +22,16 @@
   \label{tab:staebe}
   \begin{tabular}{c S[table-format=3.0] S[table-format=1.2] S[table-format=3.1] S[table-format=4.1]}
     \toprule
-    {Stab} & {$r$ / mm} & {$l$ / m} & {$m_\text{Stab}$ / g} & {$m_\text{Gewicht}$ / g} \\
+    {Stab} & {$\delta$ / mm} & {$l$ / m} & {$m_\text{Stab}$ / g} & {$m_\text{Gewicht}$ / g} \\
     \midrule
-    Eckig, zweiseitig & 104 & 0.58 & 167.1 & 2361.8 \\
-    Eckig, einseitig  & 100 & 0.60 & 502.4 & 1191.5 \\
-    Rund, einseitig   & 100 & 0.55 & 121.3 &  541.8 \\
+    Eckig, zweiseitig (d) & 104 & 0.58 & 167.1 & 2361.8 \\
+    Eckig, einseitig  (se) & 100 & 0.60 & 502.4 & 1191.5 \\
+    Rund, einseitig   (sr)  & 100 & 0.55 & 121.3 &  541.8 \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\subsection{Bestimmung des Elastizitätsmoduls}
+\subsection{Bestimmung der Elastizitätsmodule}
 
 Von den jeweils gemessenen Werten für die Durchbiegung des Stabes werden die Werte der jeweiligen Nullmessung subtrahiert, somit werden die Werte für $D(x)$ nach
 
@@ -119,6 +134,6 @@ Die Werte für $a_i$ und $b_i$ werden mittels Python 3.7.0 bestimmt und lauten
 \vspace{1em}
 \centerline{$a_\text{dl} = (6.71 \pm 0.02) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
 
-\centerline{$b_\text{dl} = (2.0 \pm 0.3) \cdot 10^{-4} $ m}
+\centerline{$b_\text{dl} = (2.0 \pm 0.3) \cdot 10^{-4} $ m.}
 \vspace{1em}
 Lorem ipsum
