@@ -1,4 +1,33 @@
+\section{Zielsetzung}
+    %TODO: Genauere Zielsetzung besprechen
+    Es soll das Elastizitätsmodul verschiedener elastischer Stäbe untersucht werden und dieses anschließend 
+    mit Literaturwerten verglichen werden.
 \section{Theorie}
-\label{sec:Theorie}
+\label{sec:theorie}
+    Das Elastizitätsmodul $E$ beschreibt die Deformation eines Körpers unter der Einwirkung einer Normalspannung $\sigma$. Als Normalspannung wird dabei eine Kraft
+    bezeichnet, welche senkrecht auf der Oberfläche steht. Über das Hook'sche Gesetz lässt sich ein Zusammenhang zwischen der Normalspannung $\sigma$ und
+    der Deformation $\frac{\delta L}{L}$ herstellen:
+    \begin{equation}
+    \label{eqn:hook}
+        \sigma = E \, \frac{\delta L}{L}.
+    \end{equation}
 
-\cite{sample}
+    Das Elastizitätsmodul eines elastischen Stabes kann durch Einspannen an einem beziehungsweise beiden Enden bestimmt werden.
+    %Beim einseitigen Einspannen, wie in ??? zu sehen, wird die Auslenkung $D(x)$ in Abhängigkeit von der Position $x$ am Stab gemessen.
+    Durch Einwirken einer Kraft $F$ am Stab, entstehen zwei Drehmomente. Das äußere Drehmoment $M_F$ ist abhängig von der Kraft $F$ und dem Hebearm am Punkt $x$ und 
+    ist daher 
+    \begin{equation}
+    \label{eqn:drehmomentA}
+    M_F = F (L-x).
+    \end{equation}
+    Dieses muss entgegengesetzt gleich zum inneren Drehmoment $M_\sigma$, damit sich eine endliche Auslenkung $D(x)$ einstellt.
+    Das innere Drehmoment ist definiert über den Abstand $y$ zwischen der neutralen Faser (die gestrichelte Linie in ???), also die Fläche in der keine Spannungen
+    auftreten, somit die Länge der Faser gleichbleibt, und dem Flächenelement $dQ$, sowie der angelegten Normalspannung $\sigma$. Durch Integration über die gesamte
+    Querschnittsfläche $Q$ ergibt sich für das innere Drehmoment:
+    \begin{equation}
+    \label{eqn:drehmomentI} 
+    M_\sigma = \int_Q y \, \sigma (y) \, dQ.
+    \end{equation}
+    Über das Hook'sche Gesetz, Gleichung \eqref{eqn:hook}, lässt sich die Normalspannung für eine Änderung der Länge des Stabes $\Delta x$ erechnen.
+    Mit der Ausgangslänge $\delta x$ und dem Krümmungsradius $R$ und der Annahme, dass $\Delta x << \delta x$ ergibt sich für die Längenänderung:
+     
