@@ -26,7 +26,7 @@ for values in werte:
     if(ignore):
         ignore = False
     else:
-        xdata[i] = 3*l**2*((float(values[0])*10**(-2))) - ((float(values[0])*10**(-2))**3)*4
+        xdata[i] = 3*l**2*((float(values[0])*(10**(-2)))) - ((float(values[0])*(10**(-2)))**3)*4
         ydata[i] = float(values[2]) - float(values[1])
         
         i+=1

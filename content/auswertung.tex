@@ -1,18 +1,24 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-\subsection{BEstimmung der Flächenträgheitsmomente}
-%
+\subsection{Bestimmung der Flächenträgheitsmomente}
+%TODO: Gleichungsreferenz
 Das Flächenträgheitsmoment des runden Stabes wird mit GLEICHUNG als
 
-\centerline{$I_\text{sr} = \frac{\pi \delta_\text{sr}^4}{64} = 4.909 \cdot 10^{-6} \symup{m}^4$}
+\vspace{.5em}
+\centerline{$I_\text{sr} = \frac{\pi \delta_\text{sr}^4}{64} = 4.909 \cdot 10^{-10} \symup{m}^4$}
+\vspace{.5em}
 
 bestimmt. Für die beiden eckigen Stäbe ergibt sich 
 
-\centerline{$I_\text{se} = \frac{\delta_\text{se}^4}{12} = 9.749 \cdot 10^{-6} \symup{m}^4$}
+\vspace{.5em}
+\centerline{$I_\text{se} = \frac{\delta_\text{se}^4}{12} = 8.334 \cdot 10^{-10} \symup{m}^4$}
+\vspace{.5em}
 
 und analog
 
-\centerline{$I_\text{d} = \frac{\delta_\text{d}^4}{12} = 8.334 \cdot 10^{-6} \symup{m}^4$.}
+\vspace{.5em}
+\centerline{$I_\text{d} = \frac{\delta_\text{d}^4}{12} = 9.759 \cdot 10^{-10} \symup{m}^4$.}
+\vspace{.5em}
 
 Dabei sind die jeweiligen $\delta$ die entsprechend gemessenen Dicken der Stäbe. Diese Werte sind in \autoref{tab:staebe} zu finden.
 
@@ -20,13 +26,13 @@ Dabei sind die jeweiligen $\delta$ die entsprechend gemessenen Dicken der Stäbe
   \centering
   \caption{Eigenschaften der Stäbe und die jeweils angehängten Massen.}
   \label{tab:staebe}
-  \begin{tabular}{c S[table-format=3.0] S[table-format=1.2] S[table-format=3.1] S[table-format=4.1]}
+  \begin{tabular}{c S[table-format=2.1] S[table-format=1.3] S[table-format=3.1] S[table-format=4.1]}
     \toprule
     {Stab} & {$\delta$ / mm} & {$l$ / m} & {$m_\text{Stab}$ / g} & {$m_\text{Gewicht}$ / g} \\
     \midrule
-    Eckig, zweiseitig (d) & 104 & 0.58 & 167.1 & 2361.8 \\
-    Eckig, einseitig  (se) & 100 & 0.60 & 502.4 & 1191.5 \\
-    Rund, einseitig   (sr)  & 100 & 0.55 & 121.3 &  541.8 \\
+    Eckig, zweiseitig (d) & 10.4 & 0.600 & 167.1 & 2361.8 \\
+    Eckig, einseitig (se) & 10.0 & 0.600 & 502.4 & 1191.5 \\
+    Rund, einseitig (sr)  & 10.0 & 0.551 & 121.3 &  541.8 \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -119,21 +125,49 @@ Die entstehenden Plots sind in \autoref{fig:stab2-plot}, \autoref{fig:stab3-plot
 
 Die Werte für $a_i$ und $b_i$ werden mittels Python 3.7.0 bestimmt und lauten
 
-\vspace{2em}
-\centerline{$a_\text{sr} = (6.39 \pm 0.01) \cdot 10^{-2} \frac{1}{\symup{m}^2}$}
-
-\centerline{$b_\text{sr} = (5.7 \pm 0.2) \cdot 10^{-4} $ m}
 \vspace{1em}
-\centerline{$a_\text{se} = (6.62 \pm 0.01) \cdot 10^{-2} \frac{1}{\symup{m}^2}$}
+\centerline{$a_\text{sr} = (63.9 \pm 0.5) \cdot 10^{-3} \frac{1}{\symup{m}^2}$}
 
-\centerline{$b_\text{se} = (4.8 \pm 0.3) \cdot 10^{-4} $ m}
+\centerline{$b_\text{sr} = (1.1 \pm 0.2) \cdot 10^{-4} $ m}
 \vspace{1em}
-\centerline{$a_\text{dr} = (6.137 \pm 0.002) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
+\centerline{$a_\text{se} = (66.2 \pm 0.5) \cdot 10^{-3} \frac{1}{\symup{m}^2}$}
 
-\centerline{$b_\text{dr} = (9 \pm 1) \cdot 10^{-5} $ m}
+\centerline{$b_\text{se} = (1 \pm 0.3) \cdot 10^{-4} $ m}
 \vspace{1em}
-\centerline{$a_\text{dl} = (6.71 \pm 0.02) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
+\centerline{$a_\text{dr} = (6.137 \pm 0.09) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
 
-\centerline{$b_\text{dl} = (2.0 \pm 0.3) \cdot 10^{-4} $ m.}
+\centerline{$b_\text{dr} = (0 \pm 1) \cdot 10^{-5} $ m}
 \vspace{1em}
-Lorem ipsum
+\centerline{$a_\text{dl} = (6.7 \pm 0.2) \cdot 10^{-3} \frac{1}{\symup{m}^2} $}
+
+\centerline{$b_\text{dl} = (-1.9 \pm 0.3) \cdot 10^{-4} $ m.}
+\vspace{1em}
+
+%TODO: Gleichungsreferenz
+Mittels GLEICHUNG kann das Elastizitätsmodul sich als
+
+\begin{equation}
+  E = \frac{m g}{2 I a}
+\end{equation}
+bestimmen.
+
+Somit sind die Elastizitätsmodule für die einseitig eingespannten Stäbe
+
+\vspace{.5em}
+\centerline{$E_\text{sr} = (19.0 \pm 0.2) \cdot 10^9$ Pa ,}
+\vspace{.5em}
+
+\vspace{.5em}
+\centerline{$E_\text{se} = (44.7 \pm 0.3) \cdot 10^9$ Pa}
+\vspace{.5em}
+
+und für den beidseitig eingespannten Stab
+
+\vspace{.5em}
+\centerline{$E_\text{dr}  = (13.7 \pm 0.2) \cdot 10^9$ Pa}
+\vspace{.5em}
+
+\vspace{.5em}
+\centerline{$E_\text{dl}  = (12.5 \pm 0.4) \cdot 10^9$ Pa}
+\vspace{.5em}
+
