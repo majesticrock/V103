@@ -144,30 +144,78 @@ Die Werte für $a_i$ und $b_i$ werden mittels Python 3.7.0 bestimmt und lauten
 \vspace{1em}
 
 %TODO: Gleichungsreferenz
-Mittels GLEICHUNG kann das Elastizitätsmodul sich als
+Mittels GLEICHUNG kann das Elastizitätsmodul für die einseitig eingespannten Stäbe als
 
 \begin{equation}
   E = \frac{m g}{2 I a}
 \end{equation}
-bestimmen.
+
+bestimmt werden.
 
 Somit sind die Elastizitätsmodule für die einseitig eingespannten Stäbe
 
 \vspace{.5em}
-\centerline{$E_\text{sr} = (19.0 \pm 0.2) \cdot 10^9$ Pa ,}
+\centerline{$E_\text{sr} = (65.4 \pm 0.5) \cdot 10^9$ Pa}
+\vspace{.5em}
+und
+\vspace{.5em}
+\centerline{$E_\text{se} = (105.9 \pm 0.8) \cdot 10^9$ Pa .}
+\vspace{.5em}
+%TODO: Gleichungsreferenz
+Für den beidseitig eingespannten Stab ergibt sich aus GLEICHUNG der Zusammenhang
+
+\begin{equation}
+  E = \frac{m g}{48 I a}
+\end{equation}
+
+Damit errechnen sich die Werte für das Elastizitätsmodul des Stabes.
+
+\vspace{.5em}
+\centerline{$E_\text{dr}  = (81 \pm 1) \cdot 10^9$ Pa}
 \vspace{.5em}
 
 \vspace{.5em}
-\centerline{$E_\text{se} = (44.7 \pm 0.3) \cdot 10^9$ Pa}
+\centerline{$E_\text{dl}  = (74 \pm 2) \cdot 10^9$ Pa}
 \vspace{.5em}
 
-und für den beidseitig eingespannten Stab
+Die beiden Werte werden gemittelt, da beide den gleichen Werte haben sollte, da es sich um denselben Stab handelt.
+
+Damit ergibt sich
 
 \vspace{.5em}
-\centerline{$E_\text{dr}  = (13.7 \pm 0.2) \cdot 10^9$ Pa}
+\centerline{$E_\text{d} = (78 \pm 1) \cdot 10^9$ Pa}
 \vspace{.5em}
 
-\vspace{.5em}
-\centerline{$E_\text{dl}  = (12.5 \pm 0.4) \cdot 10^9$ Pa}
-\vspace{.5em}
+Bei all diesen Werten berechnet sich der Fehler nach der Gauß. Also
 
+\begin{equation}
+  \sigma_\text{$E_e$} = \frac{m g}{2 I^2 a}
+\end{equation}
+
+für die einseitig eingespannten Stäbe und
+
+\begin{equation}
+  \sigma_\text{$E_e$} = \frac{m g}{48 I^2 a}
+\end{equation}
+
+für den beidseitig eingespannten Stab.
+
+Zur Bestimmung des Materials werden an dieser Stelle die Dichten der Stäbe nach
+
+\begin{equation}
+  \rho = \frac{m}{V}
+\end{equation}
+
+berechnet und ergeben sich somit zu
+
+\vspace{.05em}
+\centerline{$\rho_\text{sr} = 1172.3 \frac{\symup{kg}}{\symup{m}^3}$}
+\vspace{.05em}
+
+\vspace{.05em}
+\centerline{$\rho_\text{se} = 8373.3 \frac{\symup{kg}}{\symup{m}^3}$}
+\vspace{.05em}
+
+\vspace{.05em}
+\centerline{$\rho_\text{d} = 1869.1 \frac{\symup{kg}}{\symup{m}^3}$}
+\vspace{.05em}
